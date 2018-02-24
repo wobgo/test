@@ -1,0 +1,117 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+          
+    <!--  
+           <ion-item>
+        
+                  <ion-label fixed>Etablissement </ion-label> 
+        
+                  
+                  <ion-select okText="Ok" cancelText="Annuler" >
+                        
+                        <ion-option *ngFor="let schl of getSchool" value="{{schl?.EtablissementID}}" >{{schl?.EtablissementText}}</ion-option>
+                    
+                  
+                    </ion-select>
+        
+                </ion-item>
+        
+                <ion-item>
+                    <ion-label fixed>Classe</ion-label>
+        
+                    <ion-select okText="Ok" cancelText="Annuler" >
+                        
+                        <ion-option *ngFor="let class of getClass" value="{{class?.ClasseID}}" >{{class?.ClasseText}}</ion-option>
+                       
+                        
+                    </ion-select>
+        
+                </ion-item>
+        
+                <ion-item>
+                    <ion-label fixed>Paiement </ion-label>
+                    <ion-input type="text" value=""></ion-input>
+                </ion-item>
+        
+        
+           
+        
+     
+        
+         -->
+          
+
+            <ion-list inset>
+                <ion-item (click)="login('facebook')">
+                  <ion-icon name="logo-facebook" item-left></ion-icon>
+                  Facebook
+                </ion-item>
+                <ion-item (click)="createloginWithGoogle()">
+                  <ion-icon name="logo-google" item-left></ion-icon>
+                  Google
+                </ion-item>
+            </ion-list>
+
+
+            <hr>
+
+            <ion-list>
+                
+                <form [formGroup]="signupForm">
+                
+                        <ion-item>
+                            <ion-label fixed>Email</ion-label>
+                            <ion-input type="text" formControlName="nlogin" value=""></ion-input>
+                        </ion-item>
+                
+                        <ion-item>
+                            <ion-label fixed>Mot de passe</ion-label>
+                            <ion-input type="password" formControlName="npd" ></ion-input>
+                        </ion-item>
+                
+                  <!--        <ion-item>
+                            <ion-label fixed>Nom & prenom </ion-label>
+                            <ion-input formControlName="username" type="text" value=""></ion-input>
+                        </ion-item>
+               
+                        <ion-item>
+                            <ion-label>Genre</ion-label>
+                            <ion-select okText="Ok" cancelText="Annuler" >
+                
+                              <ion-option value="M" selected="true">Garcon</ion-option>
+                                <ion-option value="F">Fille</ion-option>
+                
+                            </ion-select>
+
+                        </ion-item> -->
+                
+
+                    </form>
+                    
+            </ion-list>  
+                        
+                      
+
+
+                        <div padding>
+                            <button ion-button (click)="signupUser()" >S'inscrire</button>
+                        </div>
+                    
+
+</ion-content>
